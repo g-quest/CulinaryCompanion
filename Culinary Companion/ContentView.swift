@@ -10,42 +10,38 @@ import RealityKit
 import RealityKitContent
 
 struct ContentView: View {
-
-    @State private var showImmersiveSpace = false
-    @State private var immersiveSpaceIsShown = false
-
-    @Environment(\.openImmersiveSpace) var openImmersiveSpace
-    @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
-
+    @State private var selectedTab = 0
     var body: some View {
-        VStack {
-            Model3D(named: "Scene", bundle: realityKitContentBundle)
-                .padding(.bottom, 50)
 
-            Text("Hello, world!")
-
-            Toggle("Show Immersive Space", isOn: $showImmersiveSpace)
-                .toggleStyle(.button)
-                .padding(.top, 50)
-        }
-        .padding()
-        .onChange(of: showImmersiveSpace) { _, newValue in
-            Task {
-                if newValue {
-                    switch await openImmersiveSpace(id: "ImmersiveSpace") {
-                    case .opened:
-                        immersiveSpaceIsShown = true
-                    case .error, .userCancelled:
-                        fallthrough
-                    @unknown default:
-                        immersiveSpaceIsShown = false
-                        showImmersiveSpace = false
-                    }
-                } else if immersiveSpaceIsShown {
-                    await dismissImmersiveSpace()
-                    immersiveSpaceIsShown = false
+        TabView(selection: $selectedTab) {
+            Intro()
+                .tabItem {
+                    Image(systemName: "house.fill")
+                    Text("Home")
                 }
-            }
+                .tag(0)
+            
+            Recipes()
+                .tabItem {
+                    Image(systemName: "book.pages.fill")
+                    Text("Recipes")
+                }
+                .tag(1)
+            
+//            CommunityView()
+//                .tabItem {
+//                    Image(systemName: "globe")
+//                    Text("Community")
+//                }
+//                .tag(2)
+//            
+//            FavoritesView()
+//                .tabItem {
+//                    Image(systemName: "bookmark")
+//                    Text("Favorites")
+//                }
+//                .tag(3)
+            
         }
     }
 }

@@ -2,13 +2,16 @@
 //  Culinary_CompanionApp.swift
 //  Culinary Companion
 //
-//  Created by Gregory Cuesta on 11/3/23.
+//  Created by Gregory Cuesta on 10/23/23.
 //
 
 import SwiftUI
 
 @main
 struct Culinary_CompanionApp: App {
+    
+    @State private var recipeImmersionStyle: ImmersionStyle = .mixed
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
@@ -17,5 +20,6 @@ struct Culinary_CompanionApp: App {
         ImmersiveSpace(id: "ImmersiveSpace") {
             ImmersiveView()
         }
+        .immersionStyle(selection: $recipeImmersionStyle, in: .mixed)
     }
 }
