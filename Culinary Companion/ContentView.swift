@@ -10,6 +10,9 @@ import RealityKit
 import RealityKitContent
 
 struct ContentView: View {
+    @State private var showImmersiveSpace = false
+    @State private var immersiveSpaceIsShown = false
+    
     @State private var selectedTab = 0
     var body: some View {
 

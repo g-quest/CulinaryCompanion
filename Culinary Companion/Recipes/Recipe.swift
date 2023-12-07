@@ -20,9 +20,9 @@ struct Recipe: View {
     
     var body: some View {
         VStack {
-            Text("Apple cinnamon muffins are a soft pastry filled with apple chunks, enhanced by aromatic cinnamon. They evoke feelings of a cozy autumn with their spicy scent and sweet apple flavor. With a crisp exterior and moist interior, some versions feature a streusel topping or caramel drizzle. Ideal for any meal or snack, these muffins pair well with coffee or tea, offering comfort and warmth any time of the year.")
+            Text("Indulge in the simple joy of Maize Munchies, the cereal that brings the authentic, golden goodness of the fields to your breakfast bowl. Toasted to a perfect crunch and sweetened with just a hint of nature's own sugars, our flakes offer a pure, hearty start to your day. With no artificial additives, each spoonful is a clean, guilt-free delight, ideal for a quick breakfast or an energizing snack. Dive into the down-to-earth flavor of Maize Munchies, and turn every meal into a celebration of life's natural bounty.")
             Model3D(named: "Scene", bundle: realityKitContentBundle)
-                .padding(.top, 50)
+                .padding(.bottom, 50)
 //            Image("apple-muffins-1")
 //                .resizable()
 //                .scaledToFit()
@@ -31,9 +31,9 @@ struct Recipe: View {
 
             
             HStack {
-                Toggle("Show Immersive Space", isOn: $showImmersiveSpace)
+                Toggle("Interact", isOn: $showImmersiveSpace)
                     .toggleStyle(.button)
-                    .padding(.top, 50)
+                    .font(.headline)
                 NavigationLink(destination: RecipeIngredients(item: item)) {
                     Text("See Ingredients")
                         .font(.headline)

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Recipes: View {
-    let items = ["Apple Cinnamon Muffins", "Banana Nut Bread", "Caesar Salad", "Dark Chocolate Brownies", "Eggplant Parmesan", "Fluffy Pancakes", "Garlic Herb Roasted Chicken", "Honey Glazed Salmon", "Italian Meatballs"]
+    let items = ["Apple Cinnamon Muffins", "Banana Nut Bread", "Caesar Salad", "Dark Chocolate Brownies", "Eggplant Parmesan", "Fluffy Pancakes", "Garlic Herb Roasted Chicken", "Honey Glazed Salmon", "Italian Meatballs", "Maize Munchies"]
 
     // Define the grid layout
     private var gridLayout: [GridItem] = Array(repeating: .init(.flexible()), count: 2)
