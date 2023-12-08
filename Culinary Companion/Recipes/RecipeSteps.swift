@@ -9,6 +9,8 @@ import SwiftUI
 
 struct RecipeSteps: View {
     
+    @Environment(\.openWindow) private var openWindow
+    
     var item: String
     
     private let steps = [
@@ -53,10 +55,8 @@ struct RecipeSteps: View {
             .padding()
             
             if currentStepIndex == 0 {
-                Button {
-                    
-                } label: {
-                    Text("Heat Oven")
+                Button("Open New Window") {
+                       openWindow(id: "OvenTimer")
                 }
 
             }

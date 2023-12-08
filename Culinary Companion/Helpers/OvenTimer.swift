@@ -13,7 +13,7 @@ struct OvenTimer: View {
     let targetTemperature: Double = 400
     let totalTime: Double = 240  // Total time in seconds
     let initialTemperature: Double = 65
-    let delayTime: Double = 15
+    let delayTime: Double = 5
     
     var body: some View {
         VStack {
@@ -25,30 +25,37 @@ struct OvenTimer: View {
                 Circle()
                     .stroke(lineWidth: 20.0)
                     .opacity(0.3)
-                    .foregroundColor(Color.green)
+                    .foregroundColor(Color.orange)
                 
                 Circle()
                     .trim(from: 0.0, to: CGFloat(min(self.currentTemperature / self.targetTemperature, 1.0)))
                     .stroke(style: StrokeStyle(lineWidth: 20.0, lineCap: .round, lineJoin: .round))
-                    .foregroundColor(Color.green)
+                    .foregroundColor(Color.orange)
                     .rotationEffect(Angle(degrees: 270.0))
                     .animation(.linear, value: self.currentTemperature)
                 
-                VStack {
-                    Text("\(Int(self.currentTemperature))°")
-                        .font(.system(size: 50, weight: .bold))
-                    Text("Target: 400°")
-                        .font(.title)
-                        .padding(.top, 8)
-                }
+                Text("\(Int(self.currentTemperature))°")
+                    .font(.system(size: 50, weight: .bold))
             }
             .padding(40)
+            if self.currentTemperature >= self.targetTemperature {
+                Text("Target Temperature Reached")
+                    .font(.title)
+                    .padding(.bottom, 8)
+                    .foregroundColor(Color.orange)
+            } else {
+                Text("Heating to: \(Int(self.targetTemperature))°")
+                    .font(.title)
+                    .padding(.bottom, 8)
+          
+                
+            }
         }
         .padding()
-        .glassBackgroundEffect()
         .onAppear {
             self.startHeating()
         }
+        
     }
     
     func startHeating() {

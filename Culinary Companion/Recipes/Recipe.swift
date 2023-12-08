@@ -17,6 +17,7 @@ struct Recipe: View {
 
     @Environment(\.openImmersiveSpace) var openImmersiveSpace
     @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
+    @Environment(\.openWindow) private var openWindow
     
     var body: some View {
         VStack {
@@ -44,6 +45,7 @@ struct Recipe: View {
                         .font(.headline)
                         .foregroundColor(.white)
                 }
+
             }
         }
         .padding()

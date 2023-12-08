@@ -16,6 +16,15 @@ struct Culinary_CompanionApp: App {
         WindowGroup {
             ContentView()
         }
+        
+        WindowGroup(id: "OvenTimer") {
+            OvenTimer()
+        }
+        .defaultSize(CGSize(width: 500, height: 500))
+        
+        WindowGroup(id: "RamsayVideo") {
+            RamsayVideo()
+        }
 
         ImmersiveSpace(id: "ImmersiveSpace") {
             ImmersiveView()
