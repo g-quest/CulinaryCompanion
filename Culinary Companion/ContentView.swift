@@ -42,14 +42,6 @@ struct ContentView: View {
                     Text("Community")
                 }
                 .tag(3)
-//
-//            FavoritesView()
-//                .tabItem {
-//                    Image(systemName: "bookmark")
-//                    Text("Favorites")
-//                }
-//                .tag(3)
-            
         }
     }
 }

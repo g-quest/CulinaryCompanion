@@ -100,10 +100,6 @@ struct RecipesMainView: View {
                         }
                     }
                 }
-                
-
-
-                
             }
             .navigationBarTitle("Recipes")
         }
