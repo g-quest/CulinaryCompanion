@@ -23,7 +23,7 @@ struct RecipesMainView: View {
                     ScrollView {
                         LazyVGrid(columns: gridLayout, spacing: 20) {
                             ForEach(categories, id: \.self) { category in
-                                NavigationLink(destination: CategoryRecipes()) {
+                                NavigationLink(destination: CategoryRecipes(category: category)) {
                                     Text(category)
                                         .padding()
                                         .frame(maxWidth: .infinity)

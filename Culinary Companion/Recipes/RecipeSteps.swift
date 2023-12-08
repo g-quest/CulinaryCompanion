@@ -13,23 +13,94 @@ struct RecipeSteps: View {
     
     var item: String
     
+    private let stepNames = [
+        "Preheat Oven",
+        "Prepare the Dough",
+        "Add Sauce",
+        "Add Cheese",
+        "Add Pepperoni",
+        "Bake the Pizza",
+        "Add Fresh Arugula",
+        "Serve and Enjoy!"
+    ]
+    
     private let steps = [
-        "Preheat Oven & Prepare Pan: Preheat your oven to 375°F (190°C). Line a muffin tin with paper liners or grease with non-stick spray.",
-        "Dry Ingredients: In a medium-sized bowl, whisk together the flour, baking powder, baking soda, salt, and cinnamon.",
-        "Butter & Sugar Mixture: In a larger bowl, cream together the softened butter and sugar until light and fluffy. Add the eggs one at a time, beating well after each addition. Stir in the vanilla extract.",
-        "Combine: Gradually add the dry ingredients to the wet mixture, alternating with the milk. Mix until just combined. Gently fold in the diced apples.",
-        "Scoop & Topping: Divide the batter evenly among the muffin cups, filling each about 2/3 full. If you're using the topping, combine the sugar and cinnamon in a small bowl and sprinkle over the muffin batter.",
-        "Bake: Bake for 20-25 minutes or until a toothpick inserted into the center of a muffin comes out clean.",
-        "Cool: Remove the muffins from the oven and let them cool in the pan for about 5 minutes. Transfer to a wire rack to cool completely."
+        "Preheat your oven to 475°F (245°C). If you have a pizza stone, place it in the oven to heat up.",
+        "Roll out the pizza dough on a floured surface to your desired thickness. If you don’t have a pizza peel, prepare the dough on a piece of parchment paper for easy transfer to the oven.",
+        "Spread the pizza sauce evenly on the dough, leaving a small border for the crust.",
+        "Sprinkle half of the mozzarella cheese over the sauce.",
+        "Add the pepperoni slices, then top with the remaining mozzarella cheese.",
+        "Transfer the pizza to the preheated oven or pizza stone. Bake for about 12-15 minutes, or until the crust is golden and the cheese is bubbly.",
+        "Once the pizza is baked, remove it from the oven. Immediately top with fresh arugula. The heat from the pizza will slightly wilt the arugula.",
+        "Slice the pizza and serve hot."
+    ]
+    
+    private let stepImages = [
+        "",
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "",
+        "s5",
+        "pizza"
     ]
 
     @State private var currentStepIndex = 0
 
     var body: some View {
         
+//        ForEach(steps.indices, id: \.self) { index in
+//            let step = steps[index]
+//            let image = (index < stepImages.count) ? stepImages[index] : "defaultImage" // Fallback image if not enough images
+//            
+//            ZStack {
+//                Image(image)
+//                    .resizable()
+//                    .aspectRatio(1, contentMode: .fill)
+//                    .cornerRadius(10)
+//                    .clipped()
+//                    .overlay(
+//                        Rectangle()
+//                            .foregroundColor(.black)
+//                            .opacity(0.45)
+//                            .cornerRadius(10)
+//                    )
+//                Text(step)
+//                    .font(.title)
+//                    .frame(width: 190, height: 200, alignment: .center)
+//                    .multilineTextAlignment(.center)
+//                    .lineLimit(nil)
+//                    .padding()
+//            }
+//        }
+        
         VStack {
-            Text(steps[currentStepIndex])
-                .padding()
+            VStack {
+                Text(stepNames[currentStepIndex])
+                    .font(.title)
+                
+                if currentStepIndex != 0 && currentStepIndex != 5 {
+                    Image(stepImages[currentStepIndex])
+                        .resizable()
+                        .aspectRatio(1, contentMode: .fill)
+                        .clipped()
+                        .padding()
+                        .frame(width: 250, height: 250)
+                }
+                
+                Text(steps[currentStepIndex])
+                    .padding([.top, .bottom], 20)
+                    .padding([.trailing, .leading], 175)
+                    .multilineTextAlignment(.center)
+                
+                if currentStepIndex == 0 {
+                    Button("Start Oven") {
+                           openWindow(id: "OvenTimer")
+                    }
+
+                }
+            }
 
             HStack {
                 Button(action: {
@@ -53,13 +124,7 @@ struct RecipeSteps: View {
                 .disabled(currentStepIndex == steps.count - 1)
             }
             .padding()
-            
-            if currentStepIndex == 0 {
-                Button("Open New Window") {
-                       openWindow(id: "OvenTimer")
-                }
-
-            }
+        
         }
         .navigationBarTitle("\(item): Step \(currentStepIndex + 1) of \(steps.count)", displayMode: .inline)
     }

@@ -14,39 +14,47 @@ struct Recipe: View {
     
     @State private var showImmersiveSpace = false
     @State private var immersiveSpaceIsShown = false
-
+    
     @Environment(\.openImmersiveSpace) var openImmersiveSpace
     @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
     @Environment(\.openWindow) private var openWindow
     
     var body: some View {
         VStack {
-            Text("Indulge in the simple joy of Maize Munchies, the cereal that brings the authentic, golden goodness of the fields to your breakfast bowl. Toasted to a perfect crunch and sweetened with just a hint of nature's own sugars, our flakes offer a pure, hearty start to your day. With no artificial additives, each spoonful is a clean, guilt-free delight, ideal for a quick breakfast or an energizing snack. Dive into the down-to-earth flavor of Maize Munchies, and turn every meal into a celebration of life's natural bounty.")
-            Model3D(named: "Scene", bundle: realityKitContentBundle)
-                .padding(.bottom, 50)
-//            Image("apple-muffins-1")
-//                .resizable()
-//                .scaledToFit()
-//                .frame(width: 225, height: 225)
-//                .padding()
-
-            
             HStack {
-                Toggle("Interact", isOn: $showImmersiveSpace)
-                    .toggleStyle(.button)
-                    .font(.headline)
-                NavigationLink(destination: RecipeIngredients(item: item)) {
-                    Text("See Ingredients")
-                        .font(.headline)
-                        .foregroundColor(.white)
-                }
-                NavigationLink(destination: RecipeSteps(item: item)) {
-                    Text("See Cooking Steps")
-                        .font(.headline)
-                        .foregroundColor(.white)
+                VStack {
+                    Text("Trader's Zest Pizza is a flavorful pizza featuring spicy pepperoni and fresh arugula and other ingredients from Trader Joe's, layered on a crispy crust with tangy tomato sauce and melty mozzarella. This delightful combination offers a perfect balance of meaty richness and peppery freshness, making it a quick and tasty meal option.")
+                        .padding(.bottom, 16)
+                    
+                    HStack {
+                        Toggle("View It", isOn: $showImmersiveSpace)
+                            .toggleStyle(.button)
+                            .font(.headline)
+                        NavigationLink(destination: RecipeIngredients(item: item)) {
+                            Text("Ingredients")
+                                .font(.headline)
+                                .foregroundColor(.white)
+                        }
+                        NavigationLink(destination: RecipeSteps(item: item)) {
+                            Text("Make It!")
+                                .font(.headline)
+                                .foregroundColor(.white)
+                        }
+                    }
                 }
 
+                Image("pizza")
+                    .resizable()
+                    .scaledToFit()
+                //                    .frame(width: 225, height: 225)
+                    .padding(32)
             }
+            
+            
+            //            Model3D(named: "Scene", bundle: realityKitContentBundle)
+            //                .padding(.bottom, 50)
+            
+            
         }
         .padding()
         .navigationBarTitle(item, displayMode: .inline)
