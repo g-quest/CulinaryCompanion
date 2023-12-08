@@ -11,38 +11,65 @@ struct RecipeIngredients: View {
     
     var item: String
     
+    let data = [
+        ("Ingredient", "Amount", "yes"),
+        ("Pre-made pizza dough", "1 Bag", "yes"),
+        ("Pizza Sauce", "1/2 Cup", "yes"),
+        ("Mozzarella Cheese", "1 1/2 Cup", "yes"),
+        ("Pepperoni", "1/2 Cup", "yes"),
+        ("Arugula", "1 Cup", "yes"),
+        ("Red Pepper Flakes", "As desired", "no"),
+        ("Grated Parmesan Cheese", "As desired", "no"),
+    ]
+    
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading, spacing: 10) {
+        
+        List(data, id: \.0) { row in
+            HStack {
+                Text(row.0)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                Text(row.1)
+                    .frame(maxWidth: .infinity, alignment: .leading)
                 
-                VStack(alignment: .leading, spacing: 6) {
-                    Text("- 1 cup Cornflakes Cereal")
-                    Text("- 1 cup Milk of Choice")
-//                    Text("- 2 cups all-purpose flour")
-//                    Text("- 1 1/2 teaspoons baking powder")
-//                    Text("- 1/2 teaspoon baking soda")
-//                    Text("- 1/2 teaspoon salt")
-//                    Text("- 2 teaspoons ground cinnamon")
-//                    Text("- 1/2 cup unsalted butter, softened")
-//                    Text("- 1 cup granulated sugar")
-//                    Text("- 2 large eggs")
-//                    Text("- 1 teaspoon pure vanilla extract")
-//                    Text("- 1/2 cup milk")
-//                    Text("- 1 1/2 cups diced apples (about 2 medium-sized apples, peeled and cored)")
-//                    // Topping
-//                    Text("Topping (optional):")
-//                        .font(.title2)
-//                        .padding(.top, 20)
-//                    Text("- 3 tablespoons granulated sugar")
-//                    Text("- 1/2 teaspoon ground cinnamon")
+                if row.2 == "yes" {
+                    Image(systemName: "checkmark.circle.fill")
+                        .font(.title)
+                        .foregroundColor(.green)
+                } else {
+                    Image(systemName: "cart.badge.plus")
+                        .font(.title)
                 }
             }
-            .padding(20)
-            
-        }.navigationBarTitle("\(item) Ingredients", displayMode: .inline)
+        }
+        .padding(.top, 25)
+        .padding([.leading, .trailing],50)
+        
+        //        ScrollView {
+        //
+        //            List(data, id: \.0) { row in
+        //                    HStack {
+        //                        Text(row.0)
+        //                            .frame(maxWidth: .infinity, alignment: .leading)
+        //                        Text(row.1)
+        //                            .frame(maxWidth: .infinity, alignment: .leading)
+        //
+        //                        if row.2 == "yes" {
+        //                            Image(systemName: "checkmark.circle.fill")
+        //                                   .font(.title)
+        //                                   .foregroundColor(.green)
+        //                        } else {
+        //                            Image(systemName: "cart.badge.plus")
+        //                                   .font(.title)
+        //                        }
+        //                    }
+        //                }
+        //
+        //
+        //        }.navigationBarTitle("\(item) Ingredients", displayMode: .inline)
     };
 }
 
 #Preview {
     RecipeIngredients(item: "Apple Pie")
 }
+
