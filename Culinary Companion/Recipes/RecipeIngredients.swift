@@ -12,7 +12,7 @@ struct RecipeIngredients: View {
     var item: String
     
     let data = [
-        ("Ingredient", "Amount", "yes"),
+        ("Ingredient", "Amount", "In Fridge"),
         ("Pre-made pizza dough", "1 Bag", "yes"),
         ("Pizza Sauce", "1/2 Cup", "yes"),
         ("Mozzarella Cheese", "1 1/2 Cup", "yes"),
@@ -24,17 +24,21 @@ struct RecipeIngredients: View {
     
     var body: some View {
         
-        List(data, id: \.0) { row in
+        List(data.indices, id: \.self) { index in
             HStack {
-                Text(row.0)
+                Text(data[index].0)
                     .frame(maxWidth: .infinity, alignment: .leading)
-                Text(row.1)
+                    .font(index == 0 ? .title : .body)
+                Text(data[index].1)
                     .frame(maxWidth: .infinity, alignment: .leading)
+                    .font(index == 0 ? .title : .body)
                 
-                if row.2 == "yes" {
+                if data[index].2 == "yes" {
                     Image(systemName: "checkmark.circle.fill")
                         .font(.title)
                         .foregroundColor(.green)
+                } else if data[index].2 == "In Fridge" {
+                    Text("In Fridge").font(.title)
                 } else {
                     Image(systemName: "cart.badge.plus")
                         .font(.title)
@@ -43,29 +47,6 @@ struct RecipeIngredients: View {
         }
         .padding(.top, 25)
         .padding([.leading, .trailing],50)
-        
-        //        ScrollView {
-        //
-        //            List(data, id: \.0) { row in
-        //                    HStack {
-        //                        Text(row.0)
-        //                            .frame(maxWidth: .infinity, alignment: .leading)
-        //                        Text(row.1)
-        //                            .frame(maxWidth: .infinity, alignment: .leading)
-        //
-        //                        if row.2 == "yes" {
-        //                            Image(systemName: "checkmark.circle.fill")
-        //                                   .font(.title)
-        //                                   .foregroundColor(.green)
-        //                        } else {
-        //                            Image(systemName: "cart.badge.plus")
-        //                                   .font(.title)
-        //                        }
-        //                    }
-        //                }
-        //
-        //
-        //        }.navigationBarTitle("\(item) Ingredients", displayMode: .inline)
     };
 }
 
