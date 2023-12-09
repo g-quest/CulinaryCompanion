@@ -7,7 +7,6 @@
 
 def Xform "Root"
 {
-    reorder nameChildren = ["Sphere_Left", "Sphere_Right", "GridMaterial"]
     def "GridMaterial" (
         active = true
         prepend references = @Materials/GridMaterial.usda@
@@ -17,13 +16,13 @@ def Xform "Root"
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
     }
 
-    def "Kelloggs_Cereal" (
+    def "pizza" (
         active = true
-        prepend references = @Kelloggs_Cereal.usdz@
+        prepend references = @pizza.usdz@
     )
     {
-        float3 xformOp:scale = (0.001, 0.001, 0.001)
-        float3 xformOp:translate = (0.33135635, 1.2936931, -1.0111096)
+        float3 xformOp:scale = (0.1, 0.1, 0.1)
+        float3 xformOp:translate = (4.284084e-8, 1.3443692, 0)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
     }
 }

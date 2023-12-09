@@ -22,14 +22,16 @@
 		1378CBAF2AF575CF009C1044 /* RecipeIngredients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1378CBAE2AF575CF009C1044 /* RecipeIngredients.swift */; };
 		1378CBB12AF57605009C1044 /* RecipeSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1378CBB02AF57605009C1044 /* RecipeSteps.swift */; };
 		1378CBB32AF57689009C1044 /* OvenTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1378CBB22AF57689009C1044 /* OvenTimer.swift */; };
+		139FCDE52B2481DB000906F4 /* RotatingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139FCDE42B2481DB000906F4 /* RotatingModel.swift */; };
+		139FCDE72B2489A3000906F4 /* dough.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 139FCDE62B2489A3000906F4 /* dough.usdz */; };
+		139FCDE92B248A87000906F4 /* pepperoni.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 139FCDE82B248A87000906F4 /* pepperoni.usdz */; };
+		139FCDEB2B248AFE000906F4 /* beer.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 139FCDEA2B248AFE000906F4 /* beer.usdz */; };
 		13BA76342B21A01A002FFCF0 /* Tutorials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BA76332B21A01A002FFCF0 /* Tutorials.swift */; };
 		13BA76372B21A169002FFCF0 /* Community.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BA76362B21A169002FFCF0 /* Community.swift */; };
-		13BA76392B21A4DD002FFCF0 /* milk.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 13BA76382B21A4DD002FFCF0 /* milk.usdz */; };
 		13BA763C2B21C498002FFCF0 /* RecipesMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BA763B2B21C498002FFCF0 /* RecipesMainView.swift */; };
 		13BA763E2B21C873002FFCF0 /* ChefView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BA763D2B21C873002FFCF0 /* ChefView.swift */; };
 		13BA76432B21D54C002FFCF0 /* RamsayVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BA76422B21D54C002FFCF0 /* RamsayVideo.swift */; };
 		13BA76452B21D85D002FFCF0 /* gramsay.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 13BA76442B21D85D002FFCF0 /* gramsay.mp4 */; };
-		13BA76472B22A4F1002FFCF0 /* beer.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 13BA76462B22A4F1002FFCF0 /* beer.usdz */; };
 		13BA76492B22A563002FFCF0 /* sauce.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 13BA76482B22A563002FFCF0 /* sauce.usdz */; };
 		13BA764B2B22A5D4002FFCF0 /* cheese.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 13BA764A2B22A5D4002FFCF0 /* cheese.usdz */; };
 		13BA764D2B22A5F8002FFCF0 /* arugula.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 13BA764C2B22A5F8002FFCF0 /* arugula.usdz */; };
@@ -54,14 +56,16 @@
 		1378CBAE2AF575CF009C1044 /* RecipeIngredients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeIngredients.swift; sourceTree = "<group>"; };
 		1378CBB02AF57605009C1044 /* RecipeSteps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeSteps.swift; sourceTree = "<group>"; };
 		1378CBB22AF57689009C1044 /* OvenTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OvenTimer.swift; sourceTree = "<group>"; };
+		139FCDE42B2481DB000906F4 /* RotatingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatingModel.swift; sourceTree = "<group>"; };
+		139FCDE62B2489A3000906F4 /* dough.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = dough.usdz; sourceTree = "<group>"; };
+		139FCDE82B248A87000906F4 /* pepperoni.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = pepperoni.usdz; sourceTree = "<group>"; };
+		139FCDEA2B248AFE000906F4 /* beer.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = beer.usdz; path = ../../../../../Downloads/beer.usdz; sourceTree = "<group>"; };
 		13BA76332B21A01A002FFCF0 /* Tutorials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tutorials.swift; sourceTree = "<group>"; };
 		13BA76362B21A169002FFCF0 /* Community.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Community.swift; sourceTree = "<group>"; };
-		13BA76382B21A4DD002FFCF0 /* milk.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = milk.usdz; sourceTree = "<group>"; };
 		13BA763B2B21C498002FFCF0 /* RecipesMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesMainView.swift; sourceTree = "<group>"; };
 		13BA763D2B21C873002FFCF0 /* ChefView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefView.swift; sourceTree = "<group>"; };
 		13BA76422B21D54C002FFCF0 /* RamsayVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RamsayVideo.swift; sourceTree = "<group>"; };
 		13BA76442B21D85D002FFCF0 /* gramsay.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = gramsay.mp4; sourceTree = "<group>"; };
-		13BA76462B22A4F1002FFCF0 /* beer.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = beer.usdz; sourceTree = "<group>"; };
 		13BA76482B22A563002FFCF0 /* sauce.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = sauce.usdz; sourceTree = "<group>"; };
 		13BA764A2B22A5D4002FFCF0 /* cheese.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = cheese.usdz; sourceTree = "<group>"; };
 		13BA764C2B22A5F8002FFCF0 /* arugula.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = arugula.usdz; sourceTree = "<group>"; };
@@ -139,6 +143,7 @@
 				1378CB9F2AF572CE009C1044 /* BGVideo.swift */,
 				1378CBB22AF57689009C1044 /* OvenTimer.swift */,
 				13BA76422B21D54C002FFCF0 /* RamsayVideo.swift */,
+				139FCDE42B2481DB000906F4 /* RotatingModel.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -149,10 +154,11 @@
 				1378CB8B2AF56E25009C1044 /* Assets.xcassets */,
 				13BA76442B21D85D002FFCF0 /* gramsay.mp4 */,
 				1378CBA12AF5738D009C1044 /* intro-bg.mp4 */,
-				13BA76382B21A4DD002FFCF0 /* milk.usdz */,
-				13BA76462B22A4F1002FFCF0 /* beer.usdz */,
+				139FCDE82B248A87000906F4 /* pepperoni.usdz */,
 				13BA764E2B22B5FD002FFCF0 /* pizza.usdz */,
 				13BA76482B22A563002FFCF0 /* sauce.usdz */,
+				139FCDEA2B248AFE000906F4 /* beer.usdz */,
+				139FCDE62B2489A3000906F4 /* dough.usdz */,
 				13BA764A2B22A5D4002FFCF0 /* cheese.usdz */,
 				13BA764C2B22A5F8002FFCF0 /* arugula.usdz */,
 			);
@@ -266,14 +272,15 @@
 			files = (
 				1378CB8F2AF56E25009C1044 /* Preview Assets.xcassets in Resources */,
 				1378CB8C2AF56E25009C1044 /* Assets.xcassets in Resources */,
-				13BA76392B21A4DD002FFCF0 /* milk.usdz in Resources */,
 				13BA76492B22A563002FFCF0 /* sauce.usdz in Resources */,
+				139FCDEB2B248AFE000906F4 /* beer.usdz in Resources */,
 				13BA764D2B22A5F8002FFCF0 /* arugula.usdz in Resources */,
 				13BA764B2B22A5D4002FFCF0 /* cheese.usdz in Resources */,
-				13BA76472B22A4F1002FFCF0 /* beer.usdz in Resources */,
 				1378CBA22AF5738D009C1044 /* intro-bg.mp4 in Resources */,
 				13BA764F2B22B5FD002FFCF0 /* pizza.usdz in Resources */,
 				13BA76452B21D85D002FFCF0 /* gramsay.mp4 in Resources */,
+				139FCDE92B248A87000906F4 /* pepperoni.usdz in Resources */,
+				139FCDE72B2489A3000906F4 /* dough.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +298,7 @@
 				1378CBA82AF57535009C1044 /* Intro.swift in Sources */,
 				13BA76342B21A01A002FFCF0 /* Tutorials.swift in Sources */,
 				1378CB862AF56E24009C1044 /* Culinary_CompanionApp.swift in Sources */,
+				139FCDE52B2481DB000906F4 /* RotatingModel.swift in Sources */,
 				13BA763E2B21C873002FFCF0 /* ChefView.swift in Sources */,
 				1378CBA52AF574AF009C1044 /* ContentViewBackup.swift in Sources */,
 				1378CB8A2AF56E24009C1044 /* ImmersiveView.swift in Sources */,

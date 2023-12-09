@@ -10,7 +10,7 @@ import SwiftUI
 struct OvenTimer: View {
     @State private var currentTemperature: Double = 65
     @State private var elapsedTime: Double = 0
-    let targetTemperature: Double = 400
+    let targetTemperature: Double = 475
     let totalTime: Double = 240  // Total time in seconds
     let initialTemperature: Double = 65
     let delayTime: Double = 5

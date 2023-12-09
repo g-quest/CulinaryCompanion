@@ -12,6 +12,10 @@ import RealityKitContent
 struct Recipe: View {
     var item: String
     
+    @State var rotation: Angle = .zero
+      @State var pizza = Entity()
+    
+    
     @State private var showImmersiveSpace = false
     @State private var immersiveSpaceIsShown = false
     
@@ -27,9 +31,12 @@ struct Recipe: View {
                         .padding(.bottom, 16)
                     
                     HStack {
-                        Toggle("View It", isOn: $showImmersiveSpace)
-                            .toggleStyle(.button)
-                            .font(.headline)
+//                        Toggle("View It", isOn: $showImmersiveSpace)
+//                            .toggleStyle(.button)
+//                            .font(.headline)
+                        Button("View It") {
+                            openWindow(id: "Pizza")
+                        }
                         NavigationLink(destination: RecipeIngredients(item: item)) {
                             Text("Ingredients")
                                 .font(.headline)
@@ -51,8 +58,8 @@ struct Recipe: View {
             }
             
             
-            //            Model3D(named: "Scene", bundle: realityKitContentBundle)
-            //                .padding(.bottom, 50)
+                        Model3D(named: "Scene", bundle: realityKitContentBundle)
+                            .padding(.bottom, 50)
             
             
         }

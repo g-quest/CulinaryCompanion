@@ -14,10 +14,42 @@
             filePath = "Culinary Companion/ImmersiveView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
             landmarkName = "unknown"
             landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "57A273E9-0DF7-4F35-A2B1-1BF6EE94F905 - b4f9a1d52563484"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Swift.MainActor @Sendable (inout _RealityKit_SwiftUI.RealityViewContent) async -&gt; () in Culinary_Companion.ImmersiveView.body.getter : some"
+                  moduleName = "Culinary Companion"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gcuesta/Developer/USC/CulinaryCompanion/Culinary%20Companion/ImmersiveView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "236">
+               </Location>
+               <Location
+                  uuid = "57A273E9-0DF7-4F35-A2B1-1BF6EE94F905 - 1691b70f27629283"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for closure #1 @Swift.MainActor @Sendable (inout _RealityKit_SwiftUI.RealityViewContent) async -&gt; () in Culinary_Companion.ImmersiveView.body.getter : some"
+                  moduleName = "Culinary Companion"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gcuesta/Developer/USC/CulinaryCompanion/Culinary%20Companion/ImmersiveView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "244">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
